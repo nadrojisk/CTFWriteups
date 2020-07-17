@@ -1,0 +1,187 @@
+from base import cracker
+
+n = """access uncover hockey bread swap ski also daring light equip inflict
+cinnamon arrange grid cricket mountain circle mistake include clock elite
+spray already rival region arrive hunt gloom symptom domain custom ring
+light color grace pause amount short want defy night hub grace photo frame
+dolphin bind cruise script common gloom enter oil dolphin fine cruise spawn
+series dutch prize fresh dolphin dad rescue oven protect call globe flat
+slab cheap lunch snow pumpkin club address orange sword alert response right
+slow hockey globe fresh dolphin point rifle spider tomato hockey arch surge
+system noodle mother lucky series fat process swing skull town cruise soccer
+hole call merry fog town almost cost miss purpose call inflict swear dolphin
+shoot recipe stick method call cart foster spot chef ridge claim unusual
+hover argue off fox agree decrease sad column call cart foster spot chef
+ridge light hospital hope hidden suit tattoo alien rifle spatial attack
+grace canal book slab filter regret magic magic cake lobster force sugar
+finger demand noise hotel install cinnamon budget tell shrug riot screen
+company club admit frame system bamboo correct clap hole hope lobster frame
+dolphin jaguar cost super clutch gentle genre bone tooth blanket awake noise
+hub call only sun sugar fire cruise soccer concert gown add off sugar now
+noodle light catch idea knee other trip nuclear dash silk assault harvest
+desert force seat almost cost miss purpose call arch siege silver noodle
+repair return endorse install gloom blue surge alter dash range purse idea
+arm amount seat alien renew place lottery idea glide flee slab champion ring
+light provide grace option blue town tilt chase machine property grace
+indoor fresh dolphin ship random pizza snake gentle adapt force spray
+blanket razor spatial asthma install neck fresh dolphin north ahead soccer
+purpose gloom entire bottom tribe tilt caution right million guess clog
+marine system want awake range property inner process siege table finger
+cover rack athlete install entire siege skull shock repeat noble soldier
+install harbor bridge silver notice novel life hole goddess adjust sun sign
+alien renew place lottery grid arch surge sugar now regret smile life island
+clock off system blanket cruise smart assist grace merry flock dolphin firm
+noodle light concert gloom pet symptom dolphin educate radar regret series
+drop narrow fresh dolphin bike mother machine hockey install high success
+sword almost dash sister pumpkin comfort action broken tell notice awake
+noise piano good enroll swear spray damp regret reflect erosion include arm
+argue dog notice demand night uncover impulse address symptom system blame
+crater like unusual gloom empower blue tribe also dash six mistake impulse
+adjust old tell tower rival smile lottery harvest inhale bone tooth elder
+repair light provide grace option blue town almost radar oval slow call cart
+foster spot chef ridge return endorse gesture harbor brand skull dance deny
+smart arrive harvest arena enrich dolphin gravity rival misery clump install
+october brisk turn now mother prefer purpose inner jungle bone tumble search
+defy machine unfold inner person fresh dolphin bike random stick purpose
+gesture illegal bridge silver notice novel life atom hunt enter marine
+thought chaos riot place pumpkin apology problem brown tooth normal razor
+smart arrow hockey entry arch domain firm awake pizza soldier grace nasty
+bubble surge almost razor spike purpose call nation bridge system dance
+ridge like clutch comfort actor olympic under bitter rival smart arrange
+harvest basket fortune similar fine mother ranch pupil call hero enrich
+dolphin notice ahead screen pulse hockey clock other slab damage rival nest
+asset hard admit force trophy charge random noise goat imitate prize fresh
+fox agent deny ridge goat harvest illegal broom security isolate riot spider
+common call help front tooth now noodle like social hotel add off turn
+isolate radar spatial attend install near bottom town thing chase magic
+purity harvest october boil seed alley raise still goat harvest illegal
+breeze turn tower mother loyal asthma install glove olympic system blame
+blade choice endorse gesture harbor bottom sustain alien rice museum coach
+injury addict outer tragic eight mother snow hole hockey clog olympic tragic
+blanket raw like snake inflict empower boat tell transfer razor miss million
+inner process marine thought fine depth pizza slow impulse adapt flee
+dolphin notice awake random clump grace nature slide dog firm cruise mad
+pattern good enrich forget dolphin story noodle limb social hockey produce
+bright seed dragon cost milk attract harvest rebel frame tooth bamboo couple
+pitch erosion hover casual forget flame alien recipe noise hub gesture
+october budget skull search dash museum combine comfort acquire bridge
+system file mother snow prosper call rebuild frown slab cheese correct civil
+concert guess private entire dog bitter cruise shift promote honey add frame
+seed dragon depth sad modify inner loan fringe fox aerobic rice magic goat
+install patient breeze spray cycle awake pitch lottery inner clock brand
+turtle craft cost random comfort install close amount silver blade cruise
+mean purpose comfort action broken tell notice ahead remain collect grace
+option flame silver bamboo damp pitch escape call rebuild fringe security
+faith cute magic hover gentle admit bone sustain also ridge limb artist
+gesture nasty fringe tooth base awake balcony pudding industry adapt frame
+shoulder faith damp stick small club add off tooth stone rescue spike
+pumpkin call opinion suit security shock ridge civil method idea enrich
+outer town alien recipe noise machine call gloom sudden ten chef cruise
+smart attract grace genre breeze spray cycle blade life purse call clinic
+sun tragic ecology ridge like column inner clog october turn spirit december
+stereo color call opera fringe dolphin bitter razor spatial art gesture
+brave force spray custom ridge return engine install oppose bone system
+educate rifle snow piano idea knee other seat already deny spike exchange
+honey address olympic traffic must crawl stand attack grace high bone tone
+tilt claim still host grace industry bottom tragic curve mother noise
+lottery guess narrow frown spot ecology mother place attack install harvest
+marine match want crawl method ethics gesture photo bottom town alone dash
+review assault harvest desert force seat alpha rival place goat give enrich
+off system elder repair review approve harvest reason forget turtle craft
+defy night lottery give enrich off system elder repair like million gloom
+photo fresh fox agree rival place hotel install cinnamon bone system nothing
+lunch remain common inflict annual amount short want defy night hub grace
+photo frame dolphin tragic require limb assume inflict private frame ski
+alien ring rack art gesture brave force spray custom ridge light collect
+harvest merry flock tribe almost crawl royal series expire clock brand skull
+trap crawl soccer concert govern fat flame sugar fire rival machine method
+club add bridge sugar warm awake pitch lottery grace depth fresh trip blame
+mother misery unit hope kite bridge flame already radar script coach hotel
+admit frame system bamboo decrease payment universe gloom process siege
+table fine curtain lucky lottery gesture boil book spot track raise still
+genuine island clock bottom tribe alone cruise soap catch harvest canal
+bottom thought dance repair return donor fat clinic amount spot tilt crawl
+soccer lottery grid nation fortune solution nothing curtain lucky lottery
+gesture brand tail sustain current require like million hundred add front
+flame almost radar spike minor industry address olympic traffic seed awake
+degree pulse hockey arena elite system file mother super conduct grace near
+obscure dolphin town reward stereo place apart lobster force sugar finger
+demand noise hotel install cinnamon budget skull search cute pig arrive
+gesture local flat turtle crazy awake meadow method hover cash fringe
+dolphin fire ring limb honey injury adapt forget slab drift awake six purse
+include problem elite silver walnut dash silly series dutch kiwi off shock
+almost cost misery column harvest analyst off turn now repeat rural lottery
+imitate prison forget domain firm awake soap uncle gesture glimpse fresh fox
+afraid rescue spice provide grace much budget skull make random stick method
+call nation fresh turtle craft defy place lottery gesture hen fringe dolphin
+fine cruise spatial attend grace high bridge tone search damp sad scout
+gloom kiwi oil turn faith cram stick catch hockey kitchen orange top educate
+ridge review another hunt nasty forget dolphin novel defy stick piano good
+kiwi bridge tone already regret spatial around hope close arch dolphin dad
+rescue snow property inner close bubble tone alcohol rate place artwork
+inflict brave fortune soft alien renew place magic apart arctic fortune
+skull black awake snow hole hockey clog olympic tragic blanket raw limb
+essay inflict process siege thought fine depth pizza slow impulse admit
+bottom system custom rate stick soldier call rebel fresh trip normal deny
+range pumpkin comfort act outer sugar ship mother right punch glimpse adjust
+olympic tragic fire noodle claim modify gloom photo fresh dolphin filter
+razor spatial attitude include indoor elite security crazy awake pitch
+cluster install globe fresh dolphin warm damp magic erosion call arena other
+ski tilt chunk stick common imitate private elite seed dragon deny random
+method hope bread symptom this fire awake remain coconut hover annual marine
+priority dragon crawl south example gesture deputy fringe trip now mother
+place attack install harvest amount system want awake remain congress
+harvest hill fresh dolphin novel defy stick place cake casino swear skull
+craft creek machine honey hockey entire surge town alcohol rival oven
+protect call opera fringe dolphin bitter razor spatial arrest hunt inform
+sun title figure ring civil hospital hover desert flock fox agent deny
+random method call clinic sun tragic ecology ridge like minor guess problem
+blue dolphin shoot recipe stick method club adapt flee dolphin stock riot
+spider common call clock olympic surge alert response remember pupil good
+jungle broom skull drill agree cinnamon hour gesture october blue dolphin
+shoulder rice noble piano hover enrich old fox agent deny random method
+honey add off tooth stone rescue spike pumpkin call bread swear traffic
+finish rival magic lottery grid clog opera skull trap deny regret series fat
+clinic amount security curtain rival remind history hotel addict fortune
+domain green renew place life grace poverty brown tooth now riot place
+concert gown illegal baby turn now mother mad minor imitate prison forget
+dolphin fire ring like solid hockey glide enrich domain grief riot machine
+piano hope kiwi brand spray craft deny situate slow call hidden swallow
+sugar now mother ridge property comfort action borrow seed curve renew range
+purpose apology enter marine sugar file riot still goat hunt narrow surge
+fox afraid rescue spice purity good problem elite slab dragon cute mad
+million inflict prison flip seat all cost remain purpose call arch siege
+security trap crater like come inflict problem elite thought charge repeat
+place goat harvest illegal book seed file regret mean purpose come fame
+outer sugar ship repair limb snake inner arctic elite this ship random noise
+equip injury admit bridge top eight ribbon review ankle hotel adjust surge
+tribe alcohol repeat noise lottery hockey arch tail town alien renew noble
+coast grace industry amount sugar nose rival ranch catch idea nasty fringe
+spray fine lunch scrub erosion inner entry forget foster pass choice pave
+common grace gloom bubble town alter cost situate concert industry adapt
+olympic shadow finger cram stick piano hover problem occur dolphin shrug
+random spike purpose call beach blue system educate ring review apology
+grace canal bubble suggest elbow cruise mirror purpose call open forget
+domain green renew place machine call inflict swear below filter razor
+soccer method industry adjust olympic tragic fire mother soccer purpose
+gloom entire bottom tribe alien ritual review antenna install gloom blue
+domain alone rifle stereo purity gown add fun domain firm awake snow coconut
+harvest photo bottom town almost radar ranch purpose install arctic blue fox
+affair dash ridge property apology lock symptom trophy educate riot saddle
+dune hope arm brown spray craft cost stereo upgrade gown adapt elite speak
+finger cram sister purity harvest pause marine proud fire riot pitch
+exchange hockey problem elite smoke notice cruise mean purpose call cash
+flee trophy fine mother noise evil industry genre blue shock alley rescue
+spice purity good problem dream stay fire riot route arrest hunt inform sun
+title figure ring limb purse comfort actor fringe dolphin filter razor
+spatial attack grace harbor boat tell trash cost random minor industry genre
+brand security warm crawl noise lottery inflict clock elite traffic film bid
+limb pulse hockey arena flee ten check crawl silk asthma install neck fresh
+foster pioneer rival soccer arrow hover cash fresh traffic faith deal saddle
+million hover person entire dog trap rescue milk art grace nature flock
+table elder repair limb assume include perfect elite tragic fire random
+place artwork injury icon little potato main mother mad solar jazz clog
+marine spray crisp awake machine hockey hunt problem other security charge
+renew place monkey call nation flush special doll abandon"""
+
+cracker(27, n)
