@@ -1,0 +1,1 @@
+loops through each value in get_flag and xor encrypts them using a seed that is updated each time

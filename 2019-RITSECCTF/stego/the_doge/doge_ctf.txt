@@ -1,0 +1,4 @@
+steghide extract -sf the_doge.png
+password: treat
+
+RITSEC{hAppY_l1L_doG3}

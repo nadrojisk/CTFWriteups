@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xmlns= "http://www.w3.org/1999/xhtml">
+<head>
+
+<link rel="stylesheet" type="text/css" href="belug1.css" />
+
+<title>All about pipes, by The Linux Information Project (LINFO)</title></head>
+
+<body bgcolor="#ffffff">
+
+<a href="index.html">LINFO</a>
+
+<br /><center><h1>Pipes: A Brief Introduction</h1></center><br />
+
+<table width="100%"><tbody><tr><td width="10%"></td><td width="80%">
+
+<br />
+
+<p>
+A <i>pipe</i> is a form of <a href="redirection.html"><i>redirection</i></a> that is used in <a href="linuxdef.html">Linux</a> and other <a href="unix-like.html">Unix-like</a> <a href="operating_system.html">operating systems</a> to send the output of one <a href="program.html">program</a> to another program for further processing.
+</p>
+
+<p>
+Redirection is the transferring of <a href="standard_output.html"><i>standard output</i></a> to some other destination, such as another program, a <a href="filedef.html">file</a> or a printer, instead of the display monitor (which is its default destination). Standard output, sometimes abbreviated <i>stdout</i>, is the destination of the output from <a href="command_line.html"><i>command line</i></a>  (i.e., all-text mode) programs in Unix-like operating systems. 
+</p>
+
+<p>
+Pipes are used to create what can be visualized as <i>a pipeline of commands</i>, which is a temporary direct connection between two or more simple programs. This connection makes possible the performance of some highly specialized task that none of the constituent programs could perform by themselves. A <a href="command.html"><i>command</i></a> is merely an instruction provided by a user telling a <a href="computer.html">computer</a> to do something, such as launch a program. The command line programs that do the further processing are referred to as <a href="filters.html"><i>filters</i></a>. 
+</p>
+
+<p>
+This direct connection between programs allows them to operate simultaneously and permits <a href="data.html">data</a> to be transferred between them continuously rather than having to pass it through temporary text files or through the display screen and having to wait for one program to be completed before the next program begins. 
+</p>
+
+<p><br />
+<strong>History</strong>
+</p>
+
+<p>
+Pipes rank alongside the <i>hierarchical file system</i> and <i>regular expressions</i> as one of the most powerful yet elegant features of Unix-like operating systems. The hierarchical file system is the organization of directories in a <a href="directory_tree.html">tree-like structure</a> which has a single <a href="root_directory.html"><i>root directory</i></a> (i.e., a directory that contains all other directories). Regular expressions are a pattern matching system that uses <a href="string.html"><i>strings</i></a> (i.e., sequences of <a href="character.html">characters</a>) constructed according to pre-defined syntax rules to find desired patterns in text. 
+</p>
+
+<p>
+Pipes were first suggested by M. Doug McIlroy, when he was a department head in the Computing Science Research Center at <a href="bell_labs.html">Bell Labs</a>, the research arm of AT&T (American Telephone and Telegraph Company), the former U.S. telecommunications <a href="monopoly.html">monopoly</a>. McIlroy had been working on <i>macros</i> since the latter part of the 1950s, and he was a ceaseless advocate of linking macros together as a more efficient alternative to series of discrete commands. A macro is a series of commands (or keyboard and <a href="mouse.html">mouse</a> actions) that is performed automatically when a certain command is entered or key(s) pressed.
+</p>
+
+<p>
+McIlroy's persistence led <a href="thompson.html">Ken Thompson</a>, who developed the original <a href="unix_upper.html">UNIX</a> at Bell Labs in 1969, to rewrite portions of his operating system in 1973 to include pipes. This implementation of pipes was not only extremely useful in itself, but it also made possible a central part of the <a href="unix_philosophy.html"><i>Unix philosophy</i></a>, the most basic concept of which is <a href="module.html"><i>modularity</i></a> (i.e., a whole that is created from independent, replaceable parts that work together efficiently). 
+</p>
+
+<p><br />
+<strong>Examples</strong>
+</p>
+
+<p>
+A pipe is designated in commands by the vertical bar character, which is located on the same key as the <a href="backslash.html">backslash</a> on U.S. keyboards. The general syntax for pipes is: 
+</p>
+
+<blockquote>
+<p>
+<code>command_1 | command_2 [| command_3 . . . ]
+</p>
+</blockquote>
+
+<p>
+This chain can continue for any number of commands or programs. 
+</p>
+
+<p>A very simple example of the benefits of piping is provided by the <a href="dmesg.html"><i>dmesg</i></a> command, which repeats the startup messages that scroll through the <a href="console.html"><i>console</i></a> (i.e., the all-text, full-screen display) while Linux is <a href="boot.html"><i>booting</i></a> (i.e., starting up). dmesg by itself produces far too many lines of output to fit into a single screen; thus, its output scrolls down the screen at high speed and only the final screenful of messages is easily readable. However, by piping the output of dmesg to the filter <i>less</i>, the startup messages can conveniently be viewed one screenful at a time, i.e., 
+
+<blockquote>
+<p>
+<code> dmesg | less</code>
+</p>
+</blockquote>
+
+<p>
+less allows the output of dmesg to be moved forward one screenful at a time by pressing the SPACE bar and back one screenful at a time by pressing the <i>b</i> key. The command can be terminated by pressing the <i>q</i> key. (The <i>more</i> command could have been used here instead of less; however, less is newer than more and has additional functions, including the ability to return to previous <i>pages</i> of the output.)
+</p>
+
+<p>
+The same result could be achieved by first redirecting the output of dmesg to a temporary file and then displaying the contents of that file on the monitor. For example, the following set of two commands uses the <i>output redirection operator</i> (designated by a rightward facing angle bracket) to first send the output of dmesg to a text file called <i>tempfile1</i> (which will be created by the output redirection operator if it does not already exist), and then it uses another output redirection operator to transfer the output of tempfile1 to the display screen:
+</p>
+
+<blockquote>
+<p>
+<code> dmesg > tempfile1</code><br />
+<code> tempfile1 > less</code>
+</p>
+</blockquote>
+
+<p>
+However, redirection to a file as an intermediate step is clearly less efficient, both because two separate commands are required and because the second command must await the completion of the first command before it can begin.
+</p>
+
+<p>
+The use of two pipes to chain three commands together could make the above example even more convenient for some situations. For example, the output of dmesg could first be piped to the <i>sort</i> filter to arrange it into <a href="alphabet.html">alphabet</a>ic order before piping it to less:
+</p>
+
+<blockquote>
+<p>
+<code> dmesg | sort -f | less</code>
+</p>
+</blockquote>
+
+<p>
+The <i>-f</i> <a href="option.html">option</a> tells <i>sort</i> to disregard <i>case</i> (i.e., whether letters are <a href="lower_case.html">lower case</a> or upper case) while sorting. 
+</p>
+   
+<p>
+Likewise, the output of the <i>ls</i> command (which is used to <i>list</i> the contents of a directory) is commonly piped to the the less (or more) command to make the output easier to read, i.e.,
+</p>
+
+<blockquote>
+<p>
+<code>ls -al | less</code>
+</p>
+</blockquote>
+
+<p>
+or
+</p>
+
+<blockquote>
+<p>
+<code>ls -al  | more</code>
+</p>
+</blockquote>
+    
+<p>
+ls reports the contents of the <a href="current_directory.html"><i>current directory</i></a> (i.e., the directory in which the user is currently working) in the absence of any <a href="argument.html"><i>arguments</i></a> (i.e., input data in the form of the names of files or directories). The <i>-l</i> option tells ls to provide detailed information about each item, and the <i>-a</i> option tells ls to include all files, including <a href="hidden_file.html"><i>hidden files</i></a> (i.e., files that are normally not visible to users). Because ls returns its output in alphabetic order by default, it is not necessary to pipe its output to the sort command (unless it is desired to perform a different type of sorting, such as reverse sorting, in which case sort's <i>-r</i> option would be used).
+</p>
+   
+<p>
+This could just as easily be done for any other directory. For example, the following would list the contents of the <a href="bin.html"><i>/bin</i></a> directory (which contains user commands) in a convenient paged format:
+</p>     
+
+<blockquote>
+<p>
+<code>ls -al /bin | less</code>
+</p>
+</blockquote>
+
+<p>
+The following example employs a pipe to combine the <i>ls</i> and the <a href="wc.html"><i>wc</i></a> (i.e., <i>word count</i>) commands in order to show how many <i>filesystem objects</i> (i.e., files, directories and links) are in the current directory:
+</p>     
+
+<blockquote>
+<p>
+<code>ls | wc -l</code>
+</p>
+</blockquote>
+
+<p>
+<i>ls</i> lists each object, one per line, and this list is then piped to wc, which, when used with its <i>-l</i> option, counts the number of lines and writes the result to standard output (which, as usual, is by default the display screen).
+</p>     
+
+<p>
+The output from a pipeline of commands can be just as easily redirected to a file (where it is written to that file) or a printer (where it is printed on paper). In the case of the above example, the output could be redirected to a file named, for instance, <i>count.txt</i>:
+</p>  
+
+<blockquote>
+<p>
+<code>ls | wc -l > count.txt</code>
+</p>
+</blockquote>
+
+</p>
+The output redirection operator will create count.txt if it does not exist or overwrite it if it already exists. (The file does not, of course, require the <i>.txt</i> <a href="filename_extension.html">extension</a>, and it could have just as easily been named <i>count</i>, <i>lines</i> or anything else.)
+<p>
+
+<p>
+The following is a slightly more complex example of combining a pipe with redirection to a file:
+</p>  
+
+<blockquote>
+<p>
+<code>echo -e "orange \npeach \ncherry" | sort > fruit</code>
+</p>
+</blockquote>
+
+<p>
+The <a href="echo.html"><i>echo</i></a> command tells the computer to send the text that follows it to standard output, and its <i>-e</i> option tells the computer to interpret each <i>\n</i> as the <i>newline symbol</i> (which is used to start a new line in the output). The pipe redirects the output from <i>echo -e</i> to the sort command, which arranges it alphabetically, after which it is redirected by the output redirection operator to the file <i>fruit</i>. 
+</p>
+
+<p>
+As a final example, and to further illustrate the great power and flexibility that pipes can provide, the following uses three pipes to search the contents of all of the files in current directory and display the total number of lines in them that contain the string <i>Linux</i> but not the string <i>UNIX</i>:
+</p>
+
+<blockquote>
+<p>
+<code> cat * | grep "Linux" | grep -v "UNIX" | wc -l</code>
+</p>
+</blockquote>
+
+<p>
+In the first of the four segments of this pipeline, the <a href="cat.html"><i>cat</i></a> command, which is used to read and <i>concatenate</i> (i.e., string together) the contents of files, concatenates the contents of all of the files in the current directory. The asterisk is a <a href="wildcard.html"><i>wildcard</i></a> that represents <i>all</i> items in a specified directory, and in this case it serves as an argument to cat to represent all objects in the current directory.
+</p>
+
+<p>
+The first pipe sends the output of cat to the <a href="grep.html"><i>grep</i></a> command, which is used to search text. The <i>Linux</i> argument tells grep to return only those lines that contain the string <i>Linux</i>. The second pipe sends these lines to another <a href="instance.html">instance</a> of grep, which, in turn, with its <i>-v</i> option, eliminates those lines that contain the string <i>UNIX</i>. Finally, the third pipe sends this output to <i>wc -l</i>, which counts the number of lines and writes the result to the display screen. 
+</p>
+
+<p><br />
+<strong>"Fake Pipes"</strong>
+</p>
+
+<p>
+A notation similar to the pipes of Unix-like operating systems is used in Microsoft's <a href="ms-dos.html">MS-DOS</a> operating system. However, the method of implementation is completely different. Sometimes the pipe-like mechanism used in MS-DOS is referred to as <i>fake pipes</i> because, instead of running two or more programs simultaneously and channeling the output data from one continuously to the next, MS-DOS uses a temporary <a href="buffer.html"><i>buffer file</i></a> (i.e., section of <a href="memory.html">memory</a>) that first accumulates the entire output from the first program and only then feeds its contents to the next program.
+</p>
+
+<p>
+This more closely resembles redirection through a file than it does the Unix concept of pipes. It takes more time because the second program cannot begin until the first has been completed, and it also consumes more system resources (i.e., memory and <a href="microprocessor.html">processor</a> time). This approach could be particularly disadvantageous if the first command produces a very large amount of output and/or does not terminate.
+</p>
+
+
+
+
+
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
+
+<p class="copy">Created April 29, 2004. Last updated August 23, 2006.<br />
+Copyright &#169; 2004 - 2006 The Linux Information Project. All Rights Reserved.</p>
+
+</td><td width="10%"></td></tr></tbody></table>
+
+</body></html>
+

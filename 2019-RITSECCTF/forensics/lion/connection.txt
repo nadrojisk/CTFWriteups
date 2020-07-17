@@ -1,0 +1,4 @@
+bh.exe tries to connect to 192.168.206.161:33333 multiple times.
+
+I tried having a computer listen on 192.168.206.161:33333 but it just sends a 0 length packet
+and closes the nc connection. 

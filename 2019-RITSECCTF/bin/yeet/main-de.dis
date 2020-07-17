@@ -1,0 +1,64 @@
+=== data offset 2 ===
+Function name : <Value type=object value=<Value type=event_identifier value='aevt'-'oapp'-'null'-'\x80'-'****'-'\x90'>>
+Function arguments:  <empty or unknown>
+ 00000 PushLiteral 0 # [<Value type=special value=nil>, <Value type=string value='Opening Beyblade usa website'>]
+ 00001 Push0
+ 00002 MessageSend 1 # <Value type=object value=<Value type=event_identifier value='ascr'-'cmnt'-'****'-''-'****'-'\x90'>>
+ 00005 StoreResult
+ 00006 PushLiteral 2 # [<Value type=special value=nil>, <Value type=string value='https://usa.beyblade.com'>]
+ 00007 Push0
+ 00008 MessageSend 3 # <Value type=object value=<Value type=event_identifier value='GURL'-'GURL'-'null'-'\xff\xff\x80'-'TEXT'-'\xff\xff\x80'>>
+ 0000b StoreResult
+ 0000c PushLiteral 4 # [<Value type=special value=nil>, <Value type=string value='start nagging user'>]
+ 0000d Push0
+ 0000e MessageSend 1 # <Value type=object value=<Value type=event_identifier value='ascr'-'cmnt'-'****'-''-'****'-'\x90'>>
+ 00011 StoreResult
+ 00012 LinkRepeat 0x33
+
+ 00015 Push3
+ 00016 Push1
+ 00017 PushUndefined
+ 00018 RepeatNTimes <disassembler not implemented>
+ 00019 Push1
+ 0001a Push0
+ 0001b MessageSend 5 # <Value type=object value=<Value type=event_identifier value='syso'-'beep'-'null'-'\xff\xff\x80'-'long'-'\xff\xff\x80'>>
+ 0001e StoreResult
+ 0001f PushLiteral 6 # [<Value type=special value=nil>, <Value type=string value='you really just ran this?'>]
+ 00020 PushLiteral 7 # <Value type=object value=<Value type=constant value=0x61707072>>
+ 00021 PushLiteral 8 # [<Value type=special value=nil>, <Value type=string value='really?'>]
+ 00022 PushLiteral 9 # <Value type=object value=<Value type=constant value=0x62746e73>>
+ 00023 PushLiteral 10 # [<Value type=special value=nil>, <Value type=string value='yeet'>]
+ 00024 PushLiteral 11 # [<Value type=special value=nil>, <Value type=string value='yeeet'>]
+ 00025 PushLiteral 12 # [<Value type=special value=nil>, <Value type=string value='yeet'>]
+ 00026 Push3
+ 00027 MakeVector
+ 00028 PushLiteral 13 # <Value type=fixnum value=0x4>
+ 00029 MessageSend 14 # <Value type=object value=<Value type=event_identifier value='syso'-'dlog'-'askr'-''-'TEXT'-''>>
+ 0002c Dup
+ 0002d StoreResult
+ 0002e Jump 0x18took
+ 00031 StoreResult
+ 00032 PushLiteral 15 # [<Value type=special value=nil>, <Value type=string value='UklUU0VDe3Byb3BpZXRhcnlfYnl0ZWNvZGVfZnR3X3BoYW50MG19'>]
+ 00033 Push0
+ 00034 MessageSend 16 # <Value type=object value=<Value type=event_identifier value='Jons'-'pClp'-'null'-'\xff\xff\x80'-'****'-''>>
+ 00037 StoreResult
+ 00038 PushLiteralExtended 17 # [<Value type=special value=nil>, <Value type=string value='set the clipboard'>]
+ 0003b Push0
+ 0003c MessageSend 1 # <Value type=object value=<Value type=event_identifier value='ascr'-'cmnt'-'****'-''-'****'-'\x90'>>
+ 0003f StoreResult
+ 00040 PushLiteralExtended 18 # [<Value type=special value=nil>, <Value type=string value='sike'>]
+ 00043 Push0
+ 00044 MessageSend 16 # <Value type=object value=<Value type=event_identifier value='Jons'-'pClp'-'null'-'\xff\xff\x80'-'****'-''>>
+ 00047 StoreResult
+ 00048 PushLiteralExtended 19 # [<Value type=special value=nil>, <Value type=string value='unset clipboard'>]
+ 0004b Push0
+ 0004c MessageSend 1 # <Value type=object value=<Value type=event_identifier value='ascr'-'cmnt'-'****'-''-'****'-'\x90'>>
+ 0004f StoreResult
+ 00050 PushLiteralExtended 20 # [<Value type=special value=nil>, <Value type=string value='yeeting'>]
+ 00053 Push0
+ 00054 MessageSend 1 # <Value type=object value=<Value type=event_identifier value='ascr'-'cmnt'-'****'-''-'****'-'\x90'>>
+ 00057 StoreResult
+ 00058 PushLiteralExtended 21 # [<Value type=special value=nil>, <Value type=string value='yeet'>]
+ 0005b Push0
+ 0005c MessageSend 22 # <Value type=object value=<Value type=event_identifier value='syso'-'notf'-'null'-'\xff\xff\x80'-'TEXT'-'\xff\xff\x80'>>
+ 0005f Return

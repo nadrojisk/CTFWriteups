@@ -1,0 +1,28 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Timebomb.java
+
+import java.io.PrintStream;
+
+public class Timebomb
+{
+
+    public Timebomb()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        double d = System.currentTimeMillis();
+        if(d > 1658063520000D)
+        {
+            System.out.println("Boom");
+            System.exit(0);
+        } else
+        {
+            System.out.println("It isn't time yet");
+            System.exit(10);
+        }
+    }
+}

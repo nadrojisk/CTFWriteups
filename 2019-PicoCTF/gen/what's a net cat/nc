@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>nc(1): arbitrary TCP/UDP connections/listens - Linux man page</title>
+<base href="https://linux.die.net/man/1/nc">
+<link rel="canonical" href="https://linux.die.net/man/1/nc">
+<link rel="stylesheet" type="text/css" href="/style/white.css">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link href="/style/search.xml" rel="search" title="Search the die.net site" type="application/opensearchdescription+xml">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The nc (or netcat) utility is used for just about anything under the sun involving TCP or UDP. It can open TCP connections, send UDP packets, listen on ...">
+<script type="text/javascript">
+<!--
+var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-50820-6']);_gaq.push(['_trackPageview']);
+window.google_analytics_uacct = 'UA-50820-6';
+// -->
+</script>
+</head>
+
+<body>
+<div id=bg>
+<div id=logo>
+<a href="https://www.die.net/"><img
+src="/style/logo.svg" alt="die.net" width=120 height=120
+onerror="this.onerror=null; this.src='/style/logo.png'"></a>
+</div>
+<div id=content>
+
+<!-- google_ad_section_start -->
+<h1>nc(1) - Linux man page</h1>
+<h2>Name</h2>
+
+<p><b>nc</b> - arbitrary TCP and UDP connections and listens
+<h2>Synopsis</h2>
+
+<p><b>nc</b> [<b>-46DdhklnrStUuvzC</b>] [<b>-i</b> <i>interval</i>] [<b>-p</b> <i>source_port</i>] [<b>-s</b> <i>source_ip_address</i>] [<b>-T</b> <i>ToS</i>]
+[<b>-w</b> <i>timeout</i>] [<b>-X</b> <i>proxy_protocol</i>] [
+<pre class="code"><b>        -x</b> <i>proxy_address</i>[                           :<i>port</i>]] [<i>hostname</i>] [<i>port</i>[<i>s</i>]]</pre>
+
+<dl compact>
+<dt>
+
+<h2>Description</h2>
+</dl>
+
+<p>The <b>nc</b> (or <b>netcat</b>) utility is used for just about anything under the sun involving TCP or UDP. It can open TCP connections, send UDP packets,
+listen on arbitrary TCP and UDP ports, do port scanning, and deal with both IPv4 and IPv6. Unlike <b><a href="telnet">telnet</a></b>(1), <b>nc</b> scripts nicely, and separates error
+messages onto standard error instead of sending them to standard output, as <b><a href="telnet" rel="nofollow">telnet</a></b>(1) does with some.
+<p>Common uses include:
+<pre class="code"><b>             •</b> simple TCP proxies</pre>
+
+<dl compact>
+<dd><b>•</b> shell-script based HTTP clients and servers<b><br>
+•</b> network daemon testing<b><br>
+•</b> a SOCKS or HTTP ProxyCommand for <b><a href="ssh">ssh</a></b>(1)<b><br>
+•</b> and much, much more
+<p>The options are as follows:
+<p><b>-4</b>' Forces <b>nc</b> to use IPv4 addresses only.
+<p><b>-6</b>' Forces <b>nc</b> to use IPv6 addresses only.
+<p><b>-D</b>' Enable debugging on the socket.
+<p><b>-d</b>' Do not attempt to read from stdin.
+<p><b>-h</b>' Prints out <b>nc</b> help.
+<p><b>-i</b> <i>interval</i><br>
+Specifies a delay time interval between lines of text sent and received. Also causes a delay time between connections to multiple ports.
+<p><b>-k</b>' Forces <b>nc</b> to stay listening for another connection after its current connection is completed. It is an error to use this option without
+the <b>-l</b> option.
+<p><b>-l</b>' Used to specify that <b>nc</b> should listen for an incoming connection rather than initiate a connection to a remote host. It is an error to use
+this option in conjunction with the <b>-p</b>, <b>-s</b>, or <b>-z</b> options. Additionally, any timeouts specified with the <b>-w</b> option are ignored.
+
+<p><b>-n</b>' Do not do any DNS or service lookups on any specified addresses, hostnames or ports.
+<p><b>-p</b> <i>source_port</i><br>
+Specifies the source port <b>nc</b> should use, subject to privilege restrictions and availability. It is an error to use this option in conjunction with the
+<b>-l</b> option.
+<p><b>-r</b>' Specifies that source and/or destination ports should be chosen randomly instead of sequentially within a range or in the order that the system
+assigns them.
+<p><b>-S</b>' Enables the RFC 2385 TCP MD5 signature option.
+<p><b>-s</b> <i>source_ip_address</i><br>
+Specifies the IP of the interface which is used to send the packets. It is an error to use this option in conjunction with the <b>-l</b> option.
+
+<p><b>-T</b> <i>ToS</i><br>
+Specifies IP Type of Service (ToS) for the connection. Valid values are the tokens ''lowdelay'', ''throughput'', ''reliability'', or an 8-bit hexadecimal value
+preceded by ''0x''.
+<p><b>-C</b>' Send CRLF as line-ending
+<p><b>-t</b>' Causes <b>nc</b> to send RFC 854 DON'T and WON'T responses to RFC 854 DO and WILL requests. This makes it possible to use <b>nc</b> to script
+telnet sessions.
+<p><b>-U</b>' Specifies to use Unix Domain Sockets.
+<p><b>-u</b>' Use UDP instead of the default option of TCP.
+<p><b>-v</b>' Have <b>nc</b> give more verbose output.
+<p><b>-w</b> <i>timeout</i><br>
+If a connection and stdin are idle for more than <i>timeout</i> seconds, then the connection is silently closed. The <b>-w</b> flag has no effect on the
+<b>-l</b> option, i.e. <b>nc</b> will listen forever for a connection, with or without the <b>-w</b> flag. The default is no timeout.
+<p><b>-X</b> <i>proxy_version</i><br>
+Requests that <b>nc</b> should use the specified protocol when talking to the proxy server. Supported protocols are ''4'' (SOCKS v.4), ''5'' (SOCKS v.5) and
+''connect'' (HTTPS proxy). If the protocol is not specified, SOCKS version 5 is used.
+<p><b>-x</b> <i>proxy_address</i>[<br>
+:<i>port</i>]<br>
+Requests that <b>nc</b> should connect to <i>hostname</i> using a proxy at <i>proxy_address</i> and <i>port</i>. If <i>port</i> is not specified, the
+well-known port for the proxy protocol is used (1080 for SOCKS, 3128 for HTTPS).
+<p><b>-z</b>' Specifies that <b>nc</b> should just scan for listening daemons, without sending any data to them. It is an error to use this option in
+conjunction with the <b>-l</b> option.
+<p><i>hostname</i> can be a numerical IP address or a symbolic hostname (unless the <b>-n</b> option is given). In general, a hostname must be specified,
+unless the <b>-l</b> option is given (in which case the local host is used).
+<p><i>port</i>[<i>s</i>] can be single integers or ranges. Ranges are in the form nn-mm. In general, a destination port must be specified, unless the <b>-U</b>
+option is given (in which case a socket must be specified).
+<p><b>CLIENT/SERVER MODEL</b>
+</dl>
+
+<p>It is quite simple to build a very basic client/server model using <b>nc</b>. On one console, start <b>nc</b> listening on a specific port for a connection.
+For example:
+<dl compact>
+<dt>$ nc -l 1234
+</dl>
+
+<p><b>nc</b> is now listening on port 1234 for a connection. On a second console (or a second machine), connect to the machine and port being listened
+on:
+<dl compact>
+<dt>$ nc 127.0.0.1 1234
+</dl>
+
+<p>There should now be a connection between the ports. Anything typed at the second console will be concatenated to the first, and vice-versa. After the
+connection has been set up, <b>nc</b> does not really care which side is being used as a 'server' and which side is being used as a 'client'. The connection
+may be terminated using an EOF ('^D').
+<h2>Data Transfer</h2>
+
+<p>The example in the previous section can be expanded to build a basic data transfer model. Any information input into one end of the connection will be
+output to the other end, and input and output can be easily captured in order to emulate file transfer.
+<p>Start by using <b>nc</b> to listen on a specific port, with output captured into a file:
+<dl compact>
+<dt>$ nc -l 1234 &gt; filename.out
+</dl>
+
+<p>Using a second machine, connect to the listening <b>nc</b> process, feeding it the file which is to be transferred:
+<dl compact>
+<dt>$ nc host.example.com 1234 &lt; filename.in
+</dl>
+
+<p>After the file has been transferred, the connection will close automatically.
+<h2>Talking To Servers</h2>
+
+<p>It is sometimes useful to talk to servers ''by hand'' rather than through a user interface. It can aid in troubleshooting, when it might be necessary to
+verify what data a server is sending in response to commands issued by the client. For example, to retrieve the home page of a web site:
+<pre class="code">$ echo -n "GET / HTTP/1.0\r\n\r\n" | nc host.example.com 80</pre>Note that this also displays the headers sent by the web server. They can be filtered, using a tool such as <b><a href="sed">sed</a></b>(1), if necessary.
+<p>More complicated examples can be built up when the user knows the format of requests required by the server. As another example, an email may be submitted
+to an SMTP server using:
+<pre class="code">$ nc [-C] localhost 25 &lt;&lt; EOF
+HELO host.example.com
+MAIL FROM: &lt;user@host.example.com&gt;
+RCPT TO: &lt;user2@host.example.com&gt;
+DATA
+Body of email.
+.
+QUIT
+EOF</pre>
+<h2>Port Scanning</h2>
+
+<p>It may be useful to know which ports are open and running services on a target machine. The <b>-z</b> flag can be used to tell <b>nc</b> to report open
+ports, rather than initiate a connection. For example:
+<pre class="code">$ nc -z host.example.com 20-30
+Connection to host.example.com 22 port [tcp/ssh] succeeded!
+Connection to host.example.com 25 port [tcp/smtp] succeeded!</pre>The port range was specified to limit the search to ports 20 - 30.
+<p>Alternatively, it might be useful to know which server software is running, and which versions. This information is often contained within the greeting
+banners. In order to retrieve these, it is necessary to first make a connection, and then break the connection when the banner has been retrieved. This can be
+accomplished by specifying a small timeout with the <b>-w</b> flag, or perhaps by issuing a "QUIT" command to the server:
+<pre class="code">$ echo "QUIT" | nc host.example.com 20-30
+SSH-1.99-OpenSSH_3.6.1p2
+Protocol mismatch.
+220 host.example.com IMS SMTP Receiver Version 0.84 Ready</pre>
+<h2>Examples</h2>
+<div id=adright>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-5823754184406795"
+     data-ad-slot="7130739364"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+<p>Open a TCP connection to port 42 of host.example.com, using port 31337 as the source port, with a timeout of 5 seconds:
+<dl compact>
+<dt>$ nc -p 31337 -w 5 host.example.com 42
+</dl>
+
+<p>Open a UDP connection to port 53 of host.example.com:
+<dl compact>
+<dt>$ nc -u host.example.com 53
+</dl>
+
+<p>Open a TCP connection to port 42 of host.example.com using 10.1.2.3 as the IP for the local end of the connection:
+<dl compact>
+<dt>$ nc -s 10.1.2.3 host.example.com 42
+</dl>
+
+<p>Create and listen on a Unix Domain Socket:
+<dl compact>
+<dt>$ nc -lU /var/tmp/dsocket
+</dl>
+
+<p>Connect to port 42 of host.example.com via an HTTP proxy at 10.2.3.4, port 8080. This example could also be used by <b><a href="ssh" rel="nofollow">ssh</a></b>(1); see the <b>ProxyCommand</b>
+directive in <b><a href="/man/5/ssh_config">ssh_config</a></b>(5) for more information.
+<dl compact>
+<dt>$ nc -x10.2.3.4:8080 -Xconnect host.example.com 42
+</dl>
+<h2>See Also</h2>
+
+<p><b><a href="cat">cat</a></b>(1), <b><a href="ssh" rel="nofollow">ssh</a></b>(1)
+<h2>Authors</h2>
+
+<p>Original implementation by *Hobbit* &lt;<a href="mailto:hobbit@avian.org">hobbit@avian.org</a>&gt;.<br>
+Rewritten with IPv6 support by Eric Jackson &lt;<a href="mailto:ericj@monkey.org">ericj@monkey.org</a>&gt;.
+<h2>Caveats</h2>
+
+<p>UDP port scans will always succeed (i.e. report the port as open), rendering the <b>-uz</b> combination of flags relatively useless.
+<p>BSD August 22, 2006 BSD
+
+<!-- google_ad_section_end -->
+<h2>Referenced By</h2>
+<b><a href="blks" rel="nofollow">blks</a></b>(1),
+<b><a href="blksize" rel="nofollow">blksize</a></b>(1),
+<b><a href="/man/5/gsissh_config" rel="nofollow">gsissh_config</a></b>(5),
+<b><a href="nedit" rel="nofollow">nedit</a></b>(1),
+<b><a href="pv" rel="nofollow">pv</a></b>(1),
+<b><a href="tcpreen" rel="nofollow">tcpreen</a></b>(1)
+</div>
+<div id=menu>
+<dl>
+<dt>Site Search</dt>
+<dd>
+<form id="cse-search-box-menu" action="https://www.google.com/cse">
+<input name="q" type="text" size="10">
+<input type="hidden" name="sa" value="Search">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input type="hidden" name="cx" value="partner-pub-5823754184406795:54htp1rtx5u">
+<input type="hidden" name="cof" value="FORID:9">
+</form>
+<script type="text/javascript">
+<!--
+document.forms["cse-search-box-menu"].action = "https://www.die.net/search/";
+// -->
+</script>
+</dd></dl>
+
+
+
+<dl>
+<dt>Library</dt>
+<dd><a href="https://linux.die.net/">linux docs</a></dd>
+<dd><a href="https://linux.die.net/man/">linux man pages</a></dd>
+<dd><a href="https://www.die.net/musings/page_load_time/">page load time</a></dd>
+</dl>
+<dl>
+<dt>Toys</dt>
+<dd><a href="https://www.die.net/earth/">world sunlight</a></dd>
+<dd><a href="https://www.die.net/moon/">moon phase</a></dd>
+<dd><a href="https://trace.die.net/">trace explorer</a></dd>
+</dl>
+
+
+<dl>
+<dt><a href="/man/1/"><img src="/style/back.gif" alt="Back"
+width=20 height=22></a></dt><dd></dd>
+</dl>
+</div></div>
+<script type="text/javascript">
+<!--
+if (top.location != self.location) top.location = self.location;
+if (/[?&][pq]=/.test(document.referrer)) document.write(unescape("%3Cscript src='/style/highlight.js' type='text/javascript'%3E%3C/script%3E"));
+function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'en', floatPosition: google.translate.TranslateElement.FloatPosition.TOP_RIGHT, gaTrack: true, gaId: 'UA-50820-6'});}
+if (!/^en/i.test(window.navigator.userLanguage||window.navigator.language)) document.write(unescape("%3Cscript src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' type='text/javascript'%3E%3C/script%3E"));
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+// -->
+</script>
+</body>
+</html>

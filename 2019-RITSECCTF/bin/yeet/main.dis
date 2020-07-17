@@ -1,0 +1,64 @@
+=== data offset 2 ===
+Function name : <Value type=object value=<Value type=event_identifier value='aevt'-'oapp'-'null'-'\x00\x00\x80\x00'-'****'-'\x00\x00\x90\x00'>>
+Function arguments:  <empty or unknown>
+ 00000 PushLiteral 0 # [<Value type=special value=nil>, <Value type=string value='\x00O\x00p\x00e\x00n\x00i\x00n\x00g\x00 \x00B\x00e\x00y\x00b\x00l\x00a\x00d\x00e\x00 \x00u\x00s\x00a\x00 \x00w\x00e\x00b\x00s\x00i\x00t\x00e'>]
+ 00001 Push0
+ 00002 MessageSend 1 # <Value type=object value=<Value type=event_identifier value='ascr'-'cmnt'-'****'-'\x00\x00\x00\x00'-'****'-'\x00\x00\x90\x00'>>
+ 00005 StoreResult
+ 00006 PushLiteral 2 # [<Value type=special value=nil>, <Value type=string value='\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00u\x00s\x00a\x00.\x00b\x00e\x00y\x00b\x00l\x00a\x00d\x00e\x00.\x00c\x00o\x00m'>]
+ 00007 Push0
+ 00008 MessageSend 3 # <Value type=object value=<Value type=event_identifier value='GURL'-'GURL'-'null'-'\xff\xff\x80\x00'-'TEXT'-'\xff\xff\x80\x00'>>
+ 0000b StoreResult
+ 0000c PushLiteral 4 # [<Value type=special value=nil>, <Value type=string value='\x00s\x00t\x00a\x00r\x00t\x00 \x00n\x00a\x00g\x00g\x00i\x00n\x00g\x00 \x00u\x00s\x00e\x00r'>]
+ 0000d Push0
+ 0000e MessageSend 1 # <Value type=object value=<Value type=event_identifier value='ascr'-'cmnt'-'****'-'\x00\x00\x00\x00'-'****'-'\x00\x00\x90\x00'>>
+ 00011 StoreResult
+ 00012 LinkRepeat 0x33
+
+ 00015 Push3
+ 00016 Push1
+ 00017 PushUndefined
+ 00018 RepeatNTimes <disassembler not implemented>
+ 00019 Push1
+ 0001a Push0
+ 0001b MessageSend 5 # <Value type=object value=<Value type=event_identifier value='syso'-'beep'-'null'-'\xff\xff\x80\x00'-'long'-'\xff\xff\x80\x00'>>
+ 0001e StoreResult
+ 0001f PushLiteral 6 # [<Value type=special value=nil>, <Value type=string value='\x00y\x00o\x00u\x00 \x00r\x00e\x00a\x00l\x00l\x00y\x00 \x00j\x00u\x00s\x00t\x00 \x00r\x00a\x00n\x00 \x00t\x00h\x00i\x00s\x00?'>]
+ 00020 PushLiteral 7 # <Value type=object value=<Value type=constant value=0x61707072>>
+ 00021 PushLiteral 8 # [<Value type=special value=nil>, <Value type=string value='\x00r\x00e\x00a\x00l\x00l\x00y\x00?'>]
+ 00022 PushLiteral 9 # <Value type=object value=<Value type=constant value=0x62746e73>>
+ 00023 PushLiteral 10 # [<Value type=special value=nil>, <Value type=string value='\x00y\x00e\x00e\x00t'>]
+ 00024 PushLiteral 11 # [<Value type=special value=nil>, <Value type=string value='\x00y\x00e\x00e\x00e\x00t'>]
+ 00025 PushLiteral 12 # [<Value type=special value=nil>, <Value type=string value='\x00y\x00e\x00e\x00t'>]
+ 00026 Push3
+ 00027 MakeVector
+ 00028 PushLiteral 13 # <Value type=fixnum value=0x4>
+ 00029 MessageSend 14 # <Value type=object value=<Value type=event_identifier value='syso'-'dlog'-'askr'-'\x00\x00\x00\x00'-'TEXT'-'\x00\x00\x00\x00'>>
+ 0002c Dup
+ 0002d StoreResult
+ 0002e Jump 0x18
+ 00031 StoreResult
+ 00032 PushLiteral 15 # [<Value type=special value=nil>, <Value type=string value='\x00U\x00k\x00l\x00U\x00U\x000\x00V\x00D\x00e\x003\x00B\x00y\x00b\x003\x00B\x00p\x00Z\x00X\x00R\x00h\x00c\x00n\x00l\x00f\x00Y\x00n\x00l\x000\x00Z\x00W\x00N\x00v\x00Z\x00G\x00V\x00f\x00Z\x00n\x00R\x003\x00X\x003\x00B\x00o\x00Y\x00W\x005\x000\x00M\x00G\x001\x009'>]
+ 00033 Push0
+ 00034 MessageSend 16 # <Value type=object value=<Value type=event_identifier value='Jons'-'pClp'-'null'-'\xff\xff\x80\x00'-'****'-'\x00\x00\x00\x00'>>
+ 00037 StoreResult
+ 00038 PushLiteralExtended 17 # [<Value type=special value=nil>, <Value type=string value='\x00s\x00e\x00t\x00 \x00t\x00h\x00e\x00 \x00c\x00l\x00i\x00p\x00b\x00o\x00a\x00r\x00d'>]
+ 0003b Push0
+ 0003c MessageSend 1 # <Value type=object value=<Value type=event_identifier value='ascr'-'cmnt'-'****'-'\x00\x00\x00\x00'-'****'-'\x00\x00\x90\x00'>>
+ 0003f StoreResult
+ 00040 PushLiteralExtended 18 # [<Value type=special value=nil>, <Value type=string value='\x00s\x00i\x00k\x00e'>]
+ 00043 Push0
+ 00044 MessageSend 16 # <Value type=object value=<Value type=event_identifier value='Jons'-'pClp'-'null'-'\xff\xff\x80\x00'-'****'-'\x00\x00\x00\x00'>>
+ 00047 StoreResult
+ 00048 PushLiteralExtended 19 # [<Value type=special value=nil>, <Value type=string value='\x00u\x00n\x00s\x00e\x00t\x00 \x00c\x00l\x00i\x00p\x00b\x00o\x00a\x00r\x00d'>]
+ 0004b Push0
+ 0004c MessageSend 1 # <Value type=object value=<Value type=event_identifier value='ascr'-'cmnt'-'****'-'\x00\x00\x00\x00'-'****'-'\x00\x00\x90\x00'>>
+ 0004f StoreResult
+ 00050 PushLiteralExtended 20 # [<Value type=special value=nil>, <Value type=string value='\x00y\x00e\x00e\x00t\x00i\x00n\x00g'>]
+ 00053 Push0
+ 00054 MessageSend 1 # <Value type=object value=<Value type=event_identifier value='ascr'-'cmnt'-'****'-'\x00\x00\x00\x00'-'****'-'\x00\x00\x90\x00'>>
+ 00057 StoreResult
+ 00058 PushLiteralExtended 21 # [<Value type=special value=nil>, <Value type=string value='\x00y\x00e\x00e\x00t'>]
+ 0005b Push0
+ 0005c MessageSend 22 # <Value type=object value=<Value type=event_identifier value='syso'-'notf'-'null'-'\xff\xff\x80\x00'-'TEXT'-'\xff\xff\x80\x00'>>
+ 0005f Return

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>strings(1) - Linux man page</title>
+<base href="https://linux.die.net/man/1/strings">
+<link rel="canonical" href="https://linux.die.net/man/1/strings">
+<link rel="stylesheet" type="text/css" href="/style/white.css">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link href="/style/search.xml" rel="search" title="Search the die.net site" type="application/opensearchdescription+xml">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="strings is mainly useful for determining the contents of non-text files.">
+<script type="text/javascript">
+<!--
+var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-50820-6']);_gaq.push(['_trackPageview']);
+window.google_analytics_uacct = 'UA-50820-6';
+// -->
+</script>
+</head>
+
+<body>
+<div id=bg>
+<div id=logo>
+<a href="https://www.die.net/"><img
+src="/style/logo.svg" alt="die.net" width=120 height=120
+onerror="this.onerror=null; this.src='/style/logo.png'"></a>
+</div>
+<div id=content>
+
+<!-- google_ad_section_start -->
+<h1>strings(1) - Linux man page</h1>
+
+<h2>Name</h2>
+
+<p>strings - print the strings of printable characters in files.
+<h2>Synopsis</h2>
+
+<p>strings [<b>-afovV</b>] [<b>-</b><i>min-len</i>] [<b>-n</b> <i>min-len</i>] [<b>--bytes=</b><i>min-len</i>] [<b>-t</b> <i>radix</i>]
+[<b>--radix=</b><i>radix</i>] [<b>-e</b> <i>encoding</i>] [<b>--encoding=</b><i>encoding</i>] [<b>-</b>] [<b>--all</b>] [<b>--print-file-name</b>] [<b>-T</b>
+<i>bfdname</i>] [<b>--target=</b><i>bfdname</i>] [<b>--help</b>] [<b>--version</b>] <i>file</i>...
+<h2>Description</h2>
+<div id=adright>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-5823754184406795"
+     data-ad-slot="7130739364"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+<p>For each <i>file</i> given, <small>GNU</small> <b>strings</b> prints the printable character sequences that are at least 4 characters long (or the number
+given with the options below) and are followed by an unprintable character. By default, it only prints the strings from the initialized and loaded sections of
+object files; for other types of files, it prints the strings from the whole file.
+<p><b>strings</b> is mainly useful for determining the contents of non-text files.
+<h2>Options</h2>
+<dl compact>
+<dt><b>-a</b>
+<dt><b>--all</b>
+<dt><b>-</b>
+
+<p>Do not scan only the initialized and loaded sections of object files; scan the whole files.
+
+<p><b>-f</b>
+<dt><b>--print-file-name</b>
+<dd>Print the name of the file before each string.
+<dt><b>--help</b>
+<dd>Print a summary of the program usage on the standard output and exit.
+<dt><b>-</b><i>min-len</i>
+<dt><b>-n</b> <i>min-len</i>
+<dt><b>--bytes=</b><i>min-len</i>
+<dd>Print sequences of characters that are at least <i>min-len</i> characters long, instead of the default 4.
+<dt><b>-o</b>
+
+<p>Like <b>-t o</b>. Some other versions of <b>strings</b> have <b>-o</b> act like <b>-t d</b> instead. Since we can not be compatible with both ways, we
+simply chose one.
+<dt><b>-t</b> <i>radix</i>
+<dt><b>--radix=</b><i>radix</i>
+<dd>Print the offset within the file before each string. The single character argument specifies the radix of the offset---<b>o</b> for octal, <b>x</b> for
+hexadecimal, or <b>d</b> for decimal.
+<dt><b>-e</b> <i>encoding</i>
+<dt><b>--encoding=</b><i>encoding</i>
+<dd>Select the character encoding of the strings that are to be found. Possible values for <i>encoding</i> are: <b>s</b> = single-7-bit-byte characters (
+<small>ASCII</small> , <small>ISO</small> 8859, etc., default), <b>S</b> = single-8-bit-byte characters, <b>b</b> = 16-bit bigendian, <b>l</b> = 16-bit
+littleendian, <b>B</b> = 32-bit bigendian, <b>L</b> = 32-bit littleendian. Useful for finding wide character strings. (<b>l</b> and <b>b</b> apply to, for
+example, Unicode <small>UTF-16/UCS-2</small> encodings).
+<dt><b>-T</b> <i>bfdname</i>
+<dt><b>--target=</b><i>bfdname</i>
+<dd>Specify an object code format other than your system's default format.
+<dt><b>-v</b>
+
+<p><b>-V</b>
+<dt><b>--version</b>
+<dd>Print the program version number on the standard output and exit.
+<dt><b>@</b><i>file</i>
+<dd>Read command-line options from <i>file</i>. The options read are inserted in place of the original @<i>file</i> option. If <i>file</i> does not exist, or
+cannot be read, then the option will be treated literally, and not removed.
+<p>Options in <i>file</i> are separated by whitespace. A whitespace character may be included in an option by surrounding the entire option in either single or
+double quotes. Any character (including a backslash) may be included by prefixing the character to be included with a backslash. The <i>file</i> may itself
+contain additional @<i>file</i> options; any such options will be processed recursively.
+</dl>
+<h2>See Also</h2>
+
+<p><b><a href="ar">ar</a></b>(1), <b><a href="nm">nm</a></b>(1), <b><a href="objdump">objdump</a></b>(1), <b><a href="ranlib">ranlib</a></b>(1), <b><a href="readelf">readelf</a></b>(1) and the Info entries for <i>binutils</i>.
+<h2>Copyright</h2>
+
+<p>Copyright © 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation,
+Inc.
+<p>Permission is granted to copy, distribute and/or modify this document under the terms of the <small>GNU</small> Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the
+license is included in the section entitled " <small>GNU</small> Free Documentation License".
+
+<!-- google_ad_section_end -->
+<h2>Referenced By</h2>
+<b><a href="bvi" rel="nofollow">bvi</a></b>(1),
+<b><a href="catdoc" rel="nofollow">catdoc</a></b>(1),
+<b><a href="catppt" rel="nofollow">catppt</a></b>(1),
+<b><a href="file" rel="nofollow">file</a></b>(1),
+<b><a href="guestfish" rel="nofollow">guestfish</a></b>(1),
+<b><a href="/man/3/guestfs" rel="nofollow">guestfs</a></b>(3),
+<b><a href="xls2csv" rel="nofollow">xls2csv</a></b>(1)
+<div id=adbottom>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-5823754184406795"
+     data-ad-slot="8789940313"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+</div>
+<div id=menu>
+<dl>
+<dt>Site Search</dt>
+<dd>
+<form id="cse-search-box-menu" action="https://www.google.com/cse">
+<input name="q" type="text" size="10">
+<input type="hidden" name="sa" value="Search">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input type="hidden" name="cx" value="partner-pub-5823754184406795:54htp1rtx5u">
+<input type="hidden" name="cof" value="FORID:9">
+</form>
+<script type="text/javascript">
+<!--
+document.forms["cse-search-box-menu"].action = "https://www.die.net/search/";
+// -->
+</script>
+</dd></dl>
+
+
+
+<dl>
+<dt>Library</dt>
+<dd><a href="https://linux.die.net/">linux docs</a></dd>
+<dd><a href="https://linux.die.net/man/">linux man pages</a></dd>
+<dd><a href="https://www.die.net/musings/page_load_time/">page load time</a></dd>
+</dl>
+<dl>
+<dt>Toys</dt>
+<dd><a href="https://www.die.net/earth/">world sunlight</a></dd>
+<dd><a href="https://www.die.net/moon/">moon phase</a></dd>
+<dd><a href="https://trace.die.net/">trace explorer</a></dd>
+</dl>
+
+
+<dl>
+<dt><a href="/man/1/"><img src="/style/back.gif" alt="Back"
+width=20 height=22></a></dt><dd></dd>
+</dl>
+</div></div>
+<script type="text/javascript">
+<!--
+if (top.location != self.location) top.location = self.location;
+if (/[?&][pq]=/.test(document.referrer)) document.write(unescape("%3Cscript src='/style/highlight.js' type='text/javascript'%3E%3C/script%3E"));
+function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'en', floatPosition: google.translate.TranslateElement.FloatPosition.TOP_RIGHT, gaTrack: true, gaId: 'UA-50820-6'});}
+if (!/^en/i.test(window.navigator.userLanguage||window.navigator.language)) document.write(unescape("%3Cscript src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' type='text/javascript'%3E%3C/script%3E"));
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+// -->
+</script>
+</body>
+</html>
