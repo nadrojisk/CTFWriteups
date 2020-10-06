@@ -28,4 +28,4 @@
 
 ## Flag
 
-`flag{pl34s3_sp34k_3ngl1sh_m1n10n!_1v3_been_b4k1ng_und3r_th0s3_st00d1o_l1ghts!}`
+`flag{J4V4_I$_th3_G04T}`
