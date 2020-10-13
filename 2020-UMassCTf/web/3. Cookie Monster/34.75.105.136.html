@@ -1,0 +1,44 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body><div id="bit-notification-bar-spacer" style="height: 42px;"></div>/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+
+
+<h2>Cookie Monster</h2>
+
+<form action="/flag" method="post" data-bitwarden-watching="1">
+  <div class="imgcontainer">
+    <img src="34.75.105.136_files/cookiemonster.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required="">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required="">
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+
+
+<div aria-live="polite" id="bit-notification-bar" style="height: 42px; width: 100%; top: 0px; left: 0px; padding: 0px; position: fixed; z-index: 2147483647; visibility: visible;"><iframe style="height: 42px; width: 100%; border: 0px none; min-height: initial;" id="bit-notification-bar-iframe"></iframe></div></body></html>

@@ -1,0 +1,376 @@
+byte code for check-key:
+  args: (key)
+0       constant  generate-new-buffer
+1       constant  " *temp*"
+2       call      1
+3       varbind   temp-buffer
+4       save-current-buffer
+5       varref    temp-buffer
+6       set-buffer
+7       discard
+8       constant  <compiled-function>
+      args: nil
+    0       constant  buffer-name
+    1       varref    temp-buffer
+    2       call      1
+    3       goto-if-nil-else-pop 1
+    6       constant  kill-buffer
+    7       varref    temp-buffer
+    8       call      1
+    9:1     return
+
+9       unwind-protect
+
+# sets key to current buffer
+
+10      varref    key
+11      insert
+12      discard
+13      point-min
+14      goto-char
+15      discard
+16      constant  buffer-string
+17      call      0
+
+# get length of key and compare to 30, quit otherwise
+
+18      length
+19      constant  30
+20      eqlsign
+21      goto-if-nil-else-pop 1
+
+# delete the first 6 characters (removes UMASS{)
+
+24      constant  delete-char
+25      constant  6
+26      call      1
+27      discard
+
+# delete last character (removes } )
+
+28      constant  nil
+29      end-of-line
+30      discard
+31      constant  -1
+32      forward-char
+33      discard
+34      constant  delete-char
+35      constant  1
+36      call      1
+37      discard
+
+# move to beg of line
+
+38      constant  beginning-of-line
+39      call      0
+40      discard
+
+# move forward 10 chars
+41      constant  nil
+42      forward-char
+43      discard
+44      constant  nil
+45      forward-char
+46      discard
+47      constant  nil
+48      forward-char
+49      discard
+50      constant  nil
+51      forward-char
+52      discard
+53      constant  nil
+54      forward-char
+55      discard
+56      constant  nil
+57      forward-char
+58      discard
+59      constant  nil
+60      forward-char
+61      discard
+62      constant  nil
+63      forward-char
+64      discard
+65      constant  nil
+66      forward-char
+67      discard
+68      constant  nil
+69      forward-char
+70      discard
+
+
+# swap 10th character with 11th character
+71      constant  transpose-chars
+72      constant  nil
+73      call      1
+74      discard
+
+# walk to the beginning of the string
+75      constant  -1
+76      forward-char
+77      discard
+78      constant  -1
+79      forward-char
+80      discard
+81      constant  -1
+82      forward-char
+83      discard
+84      constant  -1
+85      forward-char
+86      discard
+87      constant  -1
+88      forward-char
+89      discard
+90      constant  -1
+91      forward-char
+92      discard
+93      constant  -1
+94      forward-char
+95      discard
+96      constant  -1
+97      forward-char
+98      discard
+99      constant  -1
+100     forward-char
+101     discard
+102     constant  -1
+103     forward-char
+104     discard
+
+# swap character 0 and 1
+
+105     constant  transpose-chars
+106     constant  nil
+107     call      1
+108     discard
+
+109     constant  nil
+110     forward-char
+111     discard
+112     constant  nil
+113     forward-char
+114     discard
+115     constant  nil
+116     forward-char
+117     discard
+118     constant  nil
+119     forward-char
+120     discard
+121     constant  nil
+122     forward-char
+123     discard
+124     constant  nil
+125     forward-char
+126     discard
+127     constant  nil
+128     forward-char
+129     discard
+130     constant  nil
+131     forward-char
+132     discard
+133     constant  nil
+134     forward-char
+135     discard
+136     constant  nil
+137     forward-char
+138     discard
+
+139     constant  transpose-chars
+140     constant  nil
+141     call      1
+142     discard
+
+143     constant  -1
+144     forward-char
+145     discard
+146     constant  -1
+147     forward-char
+148     discard
+149     constant  -1
+150     forward-char
+151     discard
+152     constant  -1
+153     forward-char
+154     discard
+155     constant  -1
+156     forward-char
+157     discard
+158     constant  -1
+159     forward-char
+160     discard
+161     constant  -1
+162     forward-char
+163     discard
+164     constant  -1
+165     forward-char
+166     discard
+167     constant  -1
+168     forward-char
+169     discard
+170     constant  -1
+171     forward-char
+172     discard
+
+173     constant  transpose-chars
+174     constant  nil
+175     call      1
+176     discard
+
+177     constant  nil
+178     forward-char
+179     discard
+180     constant  nil
+181     forward-char
+182     discard
+183     constant  nil
+184     forward-char
+185     discard
+186     constant  nil
+187     forward-char
+188     discard
+189     constant  nil
+190     forward-char
+191     discard
+192     constant  nil
+193     forward-char
+194     discard
+195     constant  nil
+196     forward-char
+197     discard
+198     constant  nil
+199     forward-char
+200     discard
+201     constant  nil
+202     forward-char
+203     discard
+204     constant  nil
+205     forward-char
+206     discard
+
+207     constant  transpose-chars
+208     constant  nil
+209     call      1
+210     discard
+
+211     constant  -1
+212     forward-char
+213     discard
+214     constant  -1
+215     forward-char
+216     discard
+217     constant  -1
+218     forward-char
+219     discard
+220     constant  -1
+221     forward-char
+222     discard
+223     constant  -1
+224     forward-char
+225     discard
+226     constant  -1
+227     forward-char
+228     discard
+229     constant  -1
+230     forward-char
+231     discard
+232     constant  -1
+233     forward-char
+234     discard
+235     constant  -1
+236     forward-char
+237     discard
+238     constant  -1
+239     forward-char
+240     discard
+
+241     constant  transpose-chars
+242     constant  nil
+243     call      1
+244     discard
+
+245     constant  nil
+246     forward-char
+247     discard
+248     constant  nil
+249     forward-char
+250     discard
+251     constant  nil
+252     forward-char
+253     discard
+254     constant  nil
+255     forward-char
+256     discard
+257     constant  nil
+258     forward-char
+259     discard
+260     constant  nil
+261     forward-char
+262     discard
+263     constant  nil
+264     forward-char
+265     discard
+266     constant  nil
+267     forward-char
+268     discard
+269     constant  nil
+270     forward-char
+271     discard
+272     constant  nil
+273     forward-char
+274     discard
+
+275     constant  transpose-chars
+276     constant  nil
+277     call      1
+278     discard
+
+279     constant  -1
+280     forward-char
+281     discard
+282     constant  -1
+283     forward-char
+284     discard
+285     constant  -1
+286     forward-char
+287     discard
+288     constant  -1
+289     forward-char
+290     discard
+291     constant  -1
+292     forward-char
+293     discard
+294     constant  -1
+295     forward-char
+296     discard
+297     constant  -1
+298     forward-char
+299     discard
+300     constant  -1
+301     forward-char
+302     discard
+303     constant  -1
+304     forward-char
+305     discard
+306     constant  -1
+307     forward-char
+308     discard
+
+309     constant  transpose-chars
+310     constant  nil
+311     call      1
+312     discard
+
+313     constant  beginning-of-line
+314     call      0
+315     discard
+316     constant  (49 118 95 109 115 49 52 95 95 107 115 49 114 116 112 107 95 49 100 100 49 51 115)
+317     varbind   toast
+318     constant  seq-map
+319     constant  identity
+320     constant  buffer-string
+321     call      0
+322     call      2
+323     varref    toast
+324     equal
+325     unbind    1
+326:1   unbind    3
+327     return
